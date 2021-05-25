@@ -1,6 +1,5 @@
 import React, { useLayoutEffect } from "react";
 import { TouchableOpacity } from "react-native";
-import { Alert } from "react-native";
 import { StyleSheet, View, SafeAreaView, ScrollView } from "react-native";
 import { Avatar } from "react-native-elements";
 import { AntDesign, SimpleLineIcons } from "@expo/vector-icons";
@@ -16,7 +15,7 @@ const HomeScreen = ({ navigation }) => {
   };
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: "Signal Harry",
+      title: "Signal",
       headerStyle: styles.headerStyle,
       headerTitleStyle: styles.headerTitleStyle,
       headerTintStyle: styles.headerTintStyle,
@@ -38,7 +37,7 @@ const HomeScreen = ({ navigation }) => {
         </View>
       ),
     });
-  }, []);
+  }, [navigation]);
 
   return (
     <SafeAreaView>
